@@ -1,0 +1,8 @@
+prefix=/home/pergunta/Desktop/PEI/humans/install
+
+Name: syllo_serial
+Description: Description of syllo_serial
+Version: 0.0.0
+Cflags: -I/home/pergunta/Desktop/PEI/humans/install/include
+Libs: -L/home/pergunta/Desktop/PEI/humans/install/lib -lsyllo_serial
+Requires: 

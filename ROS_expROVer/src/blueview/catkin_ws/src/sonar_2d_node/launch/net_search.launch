@@ -1,0 +1,8 @@
+<launch>
+  <group ns="videoray">
+        
+    <include file="$(find sonar_2d)/launch/net_search.xml" />         
+    <node pkg="image_view" name="image_view_sonar" type="image_view" args="image:=sonar_image"/>
+
+  </group>
+</launch>
