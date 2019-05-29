@@ -40,12 +40,12 @@ The communication with the server is based on JSON.
 The movement need a vector of three axis (movX, movY, movZ) 
 ```JSON
 {
-    type: "move",
-    data:
+    "type": "move",
+    "data":
     {
-        x: movX,
-        y: movY,
-        z: movZ
+        "x": "movX",
+        "y": "movY",
+        "z": "movZ"
     }
 }
 ```
@@ -54,20 +54,20 @@ The movement need a vector of three axis (movX, movY, movZ)
 The rotation is made only by the vertical axis, and is given by degrees
 ```JSON
 {
-    type: "rotate",
-    data:
+    "type": "rotate",
+    "data":
     {
-        rotation: axisZ,
+        "rotation": "axisZ",
     }
 }
 ```
 #### Lights
 ```JSON
 {
-    type:"lights",
-    data:
+    "type": "lights",
+    "data":
     {
-        active: true/false
+        "active": "true/false"
     }
 }
 
@@ -78,10 +78,10 @@ The rotation is made only by the vertical axis, and is given by degrees
 This project is under the license of **GPL-3.0** you can see more information in [LICENSE](LICENSE)
 
 ## More Information
-You can see more information in this page +++
+You can find more information in [our website](http://xcoa.av.it.pt/~pei2018-2019_g010/).
 
 ## Acknowledgments
-* Tutors
+* Mentors
 * Hard work
 * ...
 
