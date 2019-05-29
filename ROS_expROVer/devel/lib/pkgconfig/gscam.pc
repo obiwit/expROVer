@@ -1,0 +1,8 @@
+prefix=/home/pergunta/Desktop/PEI/humans/devel
+
+Name: gscam
+Description: Description of gscam
+Version: 1.0.1
+Cflags: -I/home/pergunta/Desktop/PEI/humans/src/videoray/catkin_ws/src/gscam-master/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+Libs: -L/home/pergunta/Desktop/PEI/humans/devel/lib -lgscam -lgstapp-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0
+Requires: roscpp nodelet image_transport sensor_msgs camera_calibration_parsers camera_info_manager

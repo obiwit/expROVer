@@ -1,0 +1,8 @@
+prefix=/home/pergunta/Desktop/PEI/humans/devel
+
+Name: joint_cmd_test
+Description: Description of joint_cmd_test
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pergunta/Desktop/PEI/humans/devel/lib 
+Requires: 
