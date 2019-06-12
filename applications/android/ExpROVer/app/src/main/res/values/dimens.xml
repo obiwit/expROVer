@@ -1,0 +1,22 @@
+<resources>
+    <!-- horizontal -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_thin_horizontal_margin">12dp</dimen>
+
+    <!-- vertical -->
+    <dimen name="tiny_vertical_margin">8dp</dimen>
+    <dimen name="small_vertical_margin">12dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="big_vertical_margin">24dp</dimen>
+    <dimen name="row_padding_vertical">10dp</dimen>
+
+    <!-- misc -->
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- text -->
+    <dimen name="tiny_text_size">12sp</dimen>
+    <dimen name="small_text_size">18sp</dimen>
+    <dimen name="normal_text_size">24sp</dimen>
+    <dimen name="large_text_size">28sp</dimen>
+    <dimen name="title_text_size">36sp</dimen>
+</resources>

@@ -1,0 +1,8 @@
+prefix=/home/pergunta/Desktop/PEI/humans/install
+
+Name: input
+Description: Description of input
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pergunta/Desktop/PEI/humans/install/lib 
+Requires: roscpp std_msgs syllo_common

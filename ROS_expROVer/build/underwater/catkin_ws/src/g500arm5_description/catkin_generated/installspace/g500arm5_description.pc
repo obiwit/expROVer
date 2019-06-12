@@ -1,8 +1,0 @@
-prefix=/home/gjmarques/Documents/pei-2018-2019-g10/humans/install
-
-Name: g500arm5_description
-Description: Description of g500arm5_description
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/gjmarques/Documents/pei-2018-2019-g10/humans/install/lib 
-Requires: 

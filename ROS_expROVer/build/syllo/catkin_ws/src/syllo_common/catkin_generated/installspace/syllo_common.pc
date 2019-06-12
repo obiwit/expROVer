@@ -1,8 +1,0 @@
-prefix=/home/gjmarques/Documents/pei-2018-2019-g10/humans/install
-
-Name: syllo_common
-Description: Description of syllo_common
-Version: 0.0.0
-Cflags: -I/home/gjmarques/Documents/pei-2018-2019-g10/humans/install/include
-Libs: -L/home/gjmarques/Documents/pei-2018-2019-g10/humans/install/lib -lsyllo_common
-Requires: 

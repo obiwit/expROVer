@@ -1,0 +1,13 @@
+-I/usr/include/qt4
+-I/usr/include/qt4/QtGui
+-I/usr/include/qt4/QtCore
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="rqt_blueview"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-D$<$<NOT:$<CONFIG:Debug>>:QT_NO_DEBUG>
+-DQT_GUI_LIB
+-DQT_CORE_LIB
+-o
+/home/gjmarques/Documents/pei-2018-2019-g10/humans/build/syllo_rqt/catkin_ws/src/rqt_blueview/include/rqt_blueview/moc_blueview.cxx
+/home/gjmarques/Documents/pei-2018-2019-g10/humans/src/syllo_rqt/catkin_ws/src/rqt_blueview/include/rqt_blueview/blueview.h

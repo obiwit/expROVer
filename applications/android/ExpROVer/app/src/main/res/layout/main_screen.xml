@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_view">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawerLayout">
+
+        <!-- The main content view -->
+        <RelativeLayout
+            android:id="@+id/mainContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_grey_blue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/historyBtn"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/history_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/caviar_dreams_bold"
+                    android:text="@string/your_rovs"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/title_text_size"
+                    android:typeface="sans" />
+
+
+                <View
+                    android:id="@+id/history_separator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:background="@color/dark_grey_blue"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/history_separator"
+                    android:paddingStart="24sp"
+                    android:paddingLeft="24sp"
+                    android:paddingTop="12sp"
+                    android:paddingEnd="24sp"
+                    android:paddingRight="24sp"
+                    android:paddingBottom="24sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/historyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryXDark"
+                android:drawableEnd="@drawable/icons8_right_arrow_white_32"
+                android:paddingLeft="28sp"
+                android:paddingRight="4sp"
+                android:tag="historyBtn"
+                android:text="@string/view_all_exps"
+                android:textColor="@color/white"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </RelativeLayout>
+
+        <!-- The navigation drawer -->
+        <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:id="@+id/drawerPane"
+            android:layout_gravity="start">
+
+            <!-- Profile Box -->
+            <RelativeLayout
+                android:id="@+id/profileBox"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/material_blue_grey_800"
+                android:padding="8dp" >
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/icons8_snorkel_100"
+                    android:layout_marginTop="15dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/avatar"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="username"
+                        android:textColor="#fff"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/caviar_dreams_bold" />
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/desc"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="bottom"-->
+                        <!--android:layout_marginTop="4dp"-->
+                        <!--android:text="View Profile"-->
+                        <!--android:textColor="#fff"-->
+                        <!--android:textSize="12sp" />-->
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- List of Actions (pages) -->
+            <ListView
+                android:id="@+id/navList"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/profileBox"
+                android:layout_marginTop="0dp"
+                android:background="#ffffffff"
+                android:choiceMode="singleChoice" />
+
+        </RelativeLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <View
+        android:id="@+id/blackout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"/>
+
+    <!-- google drive sync -->
+    <RelativeLayout
+        android:id="@+id/google_drive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="100dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/drive_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="-5dp"
+            android:fontFamily="@font/caviar_dreams_bold"
+            android:text="@string/google_drive"
+            android:textColor="@color/light_grey_blue"
+            android:textSize="@dimen/normal_text_size" />
+
+        <Switch
+            android:id="@+id/enable_google_drive_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/drive_title"
+            android:layout_alignBottom="@+id/drive_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/drive_title" />
+
+        <TextView
+            android:id="@+id/drive_account_text"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drive_title"
+            android:layout_alignStart="@+id/drive_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:text="Google Account"
+            android:textColor="@color/dark_grey_blue"
+            android:textSize="@dimen/small_text_size" />
+
+        <EditText
+            android:id="@+id/drive_accountET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drive_account_text"
+            android:layout_alignStart="@+id/drive_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="16dp"
+            android:editable="false"
+            android:ems="10"
+            android:hint="google_email@gmail.com"
+            android:inputType="none"
+            android:textColor="@color/light_grey_blue"
+            android:textColorHint="@color/grey_blue" />
+
+        <TextView
+            android:id="@+id/drive_path_text"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drive_accountET"
+            android:layout_alignStart="@+id/drive_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:text="Path to ExpROVer folder"
+            android:textColor="@color/dark_grey_blue"
+            android:textSize="@dimen/small_text_size" />
+
+        <EditText
+            android:id="@+id/drive_pathET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drive_path_text"
+            android:layout_alignStart="@+id/drive_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="16dp"
+            android:editable="false"
+            android:ems="10"
+            android:inputType="none"
+            android:text="/expROVer/"
+            android:textColor="@color/light_grey_blue"
+            android:textColorHint="@color/grey_blue" />
+
+        <Button
+            android:id="@+id/drive_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryXDark"
+            android:tag="historyBtn"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <!-- pin lock -->
+    <RelativeLayout
+        android:id="@+id/pin_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/pin_lock_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="-5dp"
+            android:fontFamily="@font/caviar_dreams_bold"
+            android:text="@string/pin_lock"
+            android:textColor="@color/dark_grey_blue"
+            android:textSize="@dimen/normal_text_size" />
+
+        <Switch
+            android:id="@+id/enable_pin_lock_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/pin_lock_title"
+            android:layout_alignBottom="@+id/pin_lock_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/pin_lock_title" />
+
+        <TextView
+            android:id="@+id/pin_lock_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pin_lock_title"
+            android:layout_alignStart="@+id/pin_lock_title"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/caviar_dreams_bold"
+            android:text="Choose a pin lock"
+            android:textColor="@color/dark_grey_blue"
+            android:textSize="@dimen/tiny_text_size" />
+
+        <!-- keypad -->
+        <RelativeLayout
+            android:id="@+id/keypad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pin_lock_desc"
+            android:layout_alignStart="@+id/pin_lock_title"
+            android:layout_alignEnd="@+id/enable_pin_lock_switch"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:id="@+id/keypad_row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/num_1"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:text="1"
+                    android:textColor="@color/light_grey_blue" />
+
+                <Button
+                    android:id="@+id/num_2"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:text="2"
+                    android:textColor="@color/light_grey_blue" />
+
+                <Button
+                    android:id="@+id/num_3"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:text="3"
+                    android:textColor="@color/light_grey_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/keypad_row2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/keypad_row1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/num_4"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:text="4"
+                    android:textColor="@color/light_grey_blue" />
+
+                <Button
+                    android:id="@+id/num_5"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:text="5"
+                    android:textColor="@color/light_grey_blue" />
+
+                <Button
+                    android:id="@+id/num_6"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:text="6"
+                    android:textColor="@color/light_grey_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/keypad_row3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/keypad_row2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/num_7"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:text="7"
+                    android:textColor="@color/light_grey_blue" />
+
+                <Button
+                    android:id="@+id/num_8"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:text="8"
+                    android:textColor="@color/light_grey_blue" />
+
+                <Button
+                    android:id="@+id/num_9"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:text="9"
+                    android:textColor="@color/light_grey_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/keypad_row4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/keypad_row3"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="3">
+
+                <View
+                    android:layout_width="74dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/num_0"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/keypad_row3"
+                    android:layout_marginStart="11dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:text="0"
+                    android:textColor="@color/light_grey_blue" />
+
+                <Button
+                    android:id="@+id/num_bck"
+                    android:layout_width="74dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/keypad_row3"
+                    android:layout_marginStart="11dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey"
+                    android:text="Bck"
+                    android:textColor="@color/light_grey_blue" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- pin code -->
+        <LinearLayout
+            android:id="@+id/pin_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/keypad"
+            android:layout_alignStart="@+id/pin_lock_title"
+            android:layout_alignEnd="@+id/enable_pin_lock_switch"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="0dp"
+            android:ems="10"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/digit_1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/digit_2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/digit_3"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/digit_4"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/digit_5"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/digit_6"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/pin_lock_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryXDark"
+            android:tag="historyBtn"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <!-- exit pop-up -->
+    <RelativeLayout
+        android:id="@+id/exit_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="200dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/exit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/caviar_dreams"
+                android:text="Exit ExpROVer?"
+                android:textColor="@color/dark_grey_blue"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/exit_confirmBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryXDark"
+                android:tag="historyBtn"
+                android:text="@string/confirm"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/exit_exitBtn"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:layout_marginEnd="@dimen/small_vertical_margin"
+            android:background="@drawable/generic_image_btn_bg"
+            app:srcCompat="@drawable/icons8_delete_100" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,109 @@
+body {
+  background: url('../img/background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+  opacity: .6; 
+}
+form {
+  background: white;
+  border-radius: 2%;
+  padding: 5% 10% 2%;
+  margin-top: 10%;
+}
+form div {
+  z-index: 1;
+  position: relative;
+}
+form p a {
+  z-index: 1;
+  position: relative;
+  color: #25004b; /*#002f4b;*/
+  text-decoration: underline;
+}
+form button {
+  width: 100%;
+}
+form button#login, form button#signup {
+  margin-top: 2%; 
+  background: #002f4b;
+  border: rgb(0, 40, 63);
+  height: 45px;
+}
+form button#g_login, form button#g_signup {
+  background: white;
+  border: #eeeeee;
+  color: black;
+  height: 45px;
+  background-image: url(../img/google_icon.png);
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  margin-bottom: 2%; 
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+
+div#rovlist {
+  margin: 10%;
+}
+
+
+
+#cockpit {
+  color: white;
+  background: black;
+}
+#cockpit::before {
+  opacity: 0; 
+}
+#cockpit div#sensor-info {
+  padding: 2% 5%;
+  background: linear-gradient( 0deg, rgba(0,0,0,0), rgba(0, 0, 0, 0.3) 30%, rgba(0,0,0,0.6) );
+  z-index: 2;
+  position: relative;
+}
+#cockpit div#heading img {
+  max-height: 80px;
+  display: inline;
+}
+#cockpit .imgbox {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  height: 100%;
+}
+#cockpit .center-fit {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+#cockpit #rov-stream {
+  margin: 0;
+  padding: 0;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#cockpit #sensor-info col-sm {
+  display: inline-block;
+}

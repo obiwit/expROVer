@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".CockpitActivity" >
+
+    <WebView
+        android:id="@+id/camera_feed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_blue" />
+    <!--app:srcCompat="@drawable/under_the_sea"-->
+    <!--android:scaleType="fitXY"-->
+    <!--app:controller_layout_id="@layout/_custom_playback_control"-->
+
+    <View
+        android:id="@+id/lightout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#22FFFFFF"
+        android:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/menuBtn"-->
+            <!--android:layout_width="50sp"-->
+            <!--android:layout_height="50sp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:background="@drawable/generic_image_btn_bg"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:srcCompat="@drawable/icons8_settings_100"-->
+            <!--tools:visibility="invisible" />-->
+
+
+        <!-- controls -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/small_round_gradient"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" >
+
+            <TextView
+                android:id="@+id/vertical_bar_hint_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
+                android:fontFamily="@font/caviar_dreams_bold"
+                android:text="@string/depth"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/verticalSeekBarWrapper"
+                app:layout_constraintEnd_toEndOf="@+id/verticalSeekBarWrapper"
+                app:layout_constraintStart_toStartOf="@+id/verticalSeekBarWrapper" />
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                android:id="@+id/verticalSeekBarWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="35dp"
+                android:scaleX="2"
+                android:scaleY="2">
+
+                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                    android:id="@+id/tempVerticalJoystickSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:splitTrack="false"
+                    app:seekBarRotation="CW90" />
+            </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+        </LinearLayout>
+
+        <io.github.controlwear.virtual.joystick.android.JoystickView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/joystickView"
+            android:layout_width="wrap_content"
+            android:layout_height="400px"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/large_round_gradient"
+            custom:JV_borderWidth="4dp"
+            custom:JV_buttonColor="@color/dark_grey_blue"
+            custom:JV_buttonImage="@drawable/joystick"
+            custom:JV_buttonSizeRatio="45%"
+            custom:JV_fixedCenter="false"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- top bar -->
+        <RelativeLayout
+            android:id="@+id/sensor_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_gradient"
+            android:padding="8dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/current_depth"
+                android:layout_alignBottom="@+id/current_depth_hint"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:srcCompat="@drawable/icons8_back_accent_100" />
+
+                <TextView
+                    android:layout_width="104dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/caviar_dreams_bold"
+                    android:text="@string/end_expedition"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/small_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/current_depth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@+id/backBtn"
+                android:fontFamily="@font/caviar_dreams_bold"
+                android:text="0m"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_text_size" />
+
+            <TextView
+                android:id="@+id/current_depth_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/current_depth"
+                android:layout_alignStart="@+id/current_depth"
+                android:layout_alignEnd="@+id/current_depth"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginEnd="0dp"
+                android:fontFamily="@font/caviar_dreams_bold"
+                android:text="@string/depth"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/current_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/current_temp_hint"
+                android:layout_alignEnd="@+id/current_temp_hint"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:fontFamily="@font/caviar_dreams_bold"
+                android:text="19°"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_text_size" />
+            <!--android:layout_marginEnd="20dp"-->
+            <!--android:layout_alignParentEnd="true"-->
+
+            <TextView
+                android:id="@+id/current_temp_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/current_temp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="-10dp"
+                android:layout_toEndOf="@+id/current_depth"
+                android:fontFamily="@font/caviar_dreams_bold"
+                android:text="@string/temperature"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/current_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/current_temp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/current_temp_hint"
+                android:fontFamily="@font/caviar_dreams_bold"
+                android:text="0.0°"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_text_size" />
+
+            <ImageView
+                android:id="@+id/current_heading_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@+id/current_heading"
+                android:layout_alignBottom="@+id/current_heading_hint"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/current_heading"
+                app:srcCompat="@drawable/simple_compass" />
+
+            <TextView
+                android:id="@+id/current_heading_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/current_heading"
+                android:layout_alignEnd="@+id/current_heading"
+                android:layout_alignBottom="@+id/current_temp_hint"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/current_temp_hint"
+                android:fontFamily="@font/caviar_dreams_bold"
+                android:text="@string/heading"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <!-- light intesity -->
+        <LinearLayout
+            android:id="@+id/lights_popup_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="116dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/caviar_dreams_bold"
+            android:text="@string/lights"
+            android:textColor="@color/white"
+            android:weightSum="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/lights_popup_action_icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:weightSum="1"
+                app:srcCompat="@drawable/icons8_up_100" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:weightSum="1"
+                app:srcCompat="@drawable/icons8_light_100" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lights_popup_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/small_round_gradient"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/lights_popup_hint"
+            app:layout_constraintEnd_toEndOf="@+id/lights_popup_hint"
+            app:layout_constraintStart_toStartOf="@+id/lights_popup_hint"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="100%"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                android:id="@+id/lightsSeekBarWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:progressDrawable="@android:color/transparent"
+                android:layout_marginBottom="10dp">
+
+                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                    android:id="@+id/lightsVerticalSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:progressDrawable="@android:color/transparent"
+                    android:progress="50"
+                    android:max="100"
+                    android:thumb="@drawable/depth_thumb"
+                    android:splitTrack="false"
+                    app:seekBarRotation="CW270" />
+            </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/blackout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        tools:visibility="invisible" />
+
+    <!-- exit pop-up -->
+    <RelativeLayout
+        android:id="@+id/exit_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="100dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/exit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/caviar_dreams"
+                android:text="End expedition?"
+                android:textColor="@color/dark_grey_blue"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/exit_confirmBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryXDark"
+                android:tag="historyBtn"
+                android:text="@string/confirm"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/exit_exitBtn"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:layout_marginEnd="@dimen/small_vertical_margin"
+            android:background="@drawable/generic_image_btn_bg"
+            app:srcCompat="@drawable/icons8_delete_100" />
+    </RelativeLayout>
+
+</RelativeLayout>

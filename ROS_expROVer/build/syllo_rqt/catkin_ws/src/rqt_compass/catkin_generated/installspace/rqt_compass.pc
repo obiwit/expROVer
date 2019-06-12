@@ -1,8 +1,0 @@
-prefix=/home/pergunta/Desktop/PEI/humans/install
-
-Name: rqt_compass
-Description: Description of rqt_compass
-Version: 0.3.0
-Cflags: -I/home/pergunta/Desktop/PEI/humans/install/include -I/usr/include/qwt
-Libs: -L/home/pergunta/Desktop/PEI/humans/install/lib -lrqt_compass
-Requires: rqt_gui rqt_gui_cpp syllo_common

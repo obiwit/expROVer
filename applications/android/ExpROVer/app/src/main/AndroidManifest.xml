@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ua.deti.exprover">
+    <!-- for video streaming -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <!--<uses-permission android:name="android.permission.GET_ACCOUNTS" />-->
+    <!--<uses-permission android:name="android.permission.READ_PROFILE" />-->
+    <!--<uses-permission android:name="android.permission.READ_CONTACTS" />-->
+    <!-- for local video playback -->
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <!--<activity android:name=".bookmark_editor"></activity>-->
+        <activity
+            android:name=".VideoPlaying"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".CockpitActivity"
+            android:label="New Expedition"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ViewROVActivity" />
+        <activity
+            android:name=".ConfigureROVActivity"
+            android:label="Configure ROV"
+            android:parentActivityName=".ViewROVActivity" />
+        <activity
+            android:name=".ViewROVActivity"
+            android:label="View ROV"
+            android:parentActivityName=".MainScreenActivity" />
+        <activity
+            android:name=".NewROVActivity"
+            android:label="Add new ROV"
+            android:parentActivityName=".MainScreenActivity" />
+        <activity
+            android:name=".HistoryActivity"
+            android:label="History"
+            android:parentActivityName=".MainScreenActivity" />
+        <activity
+            android:name=".MainScreenActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".SignUpActivity"
+            android:label="Sign Up"
+            android:parentActivityName=".SignInActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".SignInActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

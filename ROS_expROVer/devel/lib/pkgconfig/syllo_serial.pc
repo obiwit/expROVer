@@ -1,8 +1,0 @@
-prefix=/home/pergunta/Desktop/PEI/humans/devel
-
-Name: syllo_serial
-Description: Description of syllo_serial
-Version: 0.0.0
-Cflags: -I/home/pergunta/Desktop/PEI/humans/src/syllo/catkin_ws/src/syllo_serial/include
-Libs: -L/home/pergunta/Desktop/PEI/humans/devel/lib -lsyllo_serial
-Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/gjmarques/Documents/pei-2018-2019-g10/humans/devel
+
+Name: syllo_common
+Description: Description of syllo_common
+Version: 0.0.0
+Cflags: -I/home/gjmarques/Documents/pei-2018-2019-g10/humans/src/syllo/catkin_ws/src/syllo_common/include
+Libs: -L/home/gjmarques/Documents/pei-2018-2019-g10/humans/devel/lib -lsyllo_common
+Requires: 

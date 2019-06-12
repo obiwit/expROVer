@@ -1,0 +1,74 @@
+<resources>
+    <!-- config -->
+    <string name="app_name">ExpROVer</string>
+
+    <!-- sign up & sign in -->
+    <string name="sign_up">Sign up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="sign_up_email">Sign up with email</string>
+    <string name="sign_in_email">Sign in with email</string>
+    <string name="sign_up_google">Sign up with Google</string>
+    <string name="sign_in_google">Sign in with Google</string>
+    <string name="or_sign_up_email">Or sign up with email</string>
+    <string name="or_sign_in_email">Or sign in with email</string>
+    <string name="sign_up_prompt">Don\'t have an account yet? Sign up instead.</string>
+    <string name="sign_in_prompt">Already have an account? Sign in instead.</string>
+    <!--<string name="sign_in_as_guest">Sign in as guest</string>-->
+    <!-- errors -->
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <!--<string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>-->
+
+    <!-- main screen -->
+    <string name="your_rovs">Your ROVs</string>
+    <string name="view_all_exps">View all previous expeditions</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+    <string name="google_drive">Google Drive</string>
+    <string name="sync">Sync with Google Drive</string>
+    <string name="pin_lock">Pin lock</string>
+    <string name="enable_lock">Enable pin lock</string>
+
+    <!-- add/configure new rov -->
+    <string name="rov_name_prompt">ROV name</string>
+    <string name="ip_address_prompt">IPv4 address</string>
+    <string name="icon_prompt">ROV image or icon</string>
+    <string name="new_rov_prompt">Add new ROV</string>
+    <string name="configure_rov_prompt">Save changes</string>
+
+    <!-- history -->
+    <string name="your_history">Your History</string>
+
+    <!-- view rov -->
+    <string name="status_prompt">Status - </string>
+    <string name="connected">connected</string>
+    <string name="disconnected">disconnected</string>
+    <string name="new_expedition">Start a new expedition</string>
+    <string name="view_history">View history</string>
+    <string name="configure">Configure</string>
+
+    <!-- cockpit -->
+    <string name="end_expedition">End Expedition</string>
+    <string name="depth">depth</string>
+    <string name="temperature">temperature</string>
+    <string name="heading">heading</string>
+    <string name="new_bookmark">New bookmark</string>
+    <string name="bookmark_comment_prompt">Optional Bookmark Description</string>
+    <string name="confirm">Confirm</string>
+    <string name="settings">Settings</string>
+    <string name="lights">lights</string>
+    <string name="light_intensity">Light\'s intensity</string>
+    <string name="reference_frame">Reference Frame</string>
+    <string name="name">Name</string>
+    <string name="Geotag">Geotag</string>
+    <string name="new_exp_name_prompt">New expedition\'s name</string>
+    <string name="new_exp_geotag_prompt">New expedition\'s geotag</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- video playback -->
+    <string name="back">Back</string>
+</resources>

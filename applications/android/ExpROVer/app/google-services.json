@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "548072285432",
+    "firebase_url": "https://exprover-1554799898857.firebaseio.com",
+    "project_id": "exprover-1554799898857",
+    "storage_bucket": "exprover-1554799898857.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548072285432:android:fe92b8a9506d11a5",
+        "android_client_info": {
+          "package_name": "ua.deti.exprover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548072285432-368n9eatglsoldsld6ro2gukhecinaig.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ua.deti.exprover",
+            "certificate_hash": "4b6c650162897d8b09619fb1e5cb3fe77edd7dca"
+          }
+        },
+        {
+          "client_id": "548072285432-l9hffp5ks9e3m7q0620us6036aann7ha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcCj5aiW8BYoDSvt972An-fhZkzVUEr_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548072285432-l9hffp5ks9e3m7q0620us6036aann7ha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

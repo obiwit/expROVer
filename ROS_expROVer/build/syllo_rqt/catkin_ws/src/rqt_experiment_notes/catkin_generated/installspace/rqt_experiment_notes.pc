@@ -1,8 +1,0 @@
-prefix=/home/gjmarques/Documents/pei-2018-2019-g10/humans/install
-
-Name: rqt_experiment_notes
-Description: Description of rqt_experiment_notes
-Version: 0.3.0
-Cflags: -I/home/gjmarques/Documents/pei-2018-2019-g10/humans/install/include
-Libs: -L/home/gjmarques/Documents/pei-2018-2019-g10/humans/install/lib -lrqt_experiment_notes
-Requires: rqt_gui rqt_gui_cpp

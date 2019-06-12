@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- theme related -->
+    <color name="colorPrimary">#0277BD</color>
+    <color name="colorPrimaryLight">#5D92B9</color>
+    <color name="colorPrimaryMed">#005A92</color>
+    <color name="colorPrimaryDark">#01446D</color>
+    <color name="colorPrimaryXDark">#023555</color>
+    <color name="colorAccent">#D84315</color>
+
+    <!-- grey blues -->
+    <color name="xlight_grey_blue">#AECDEB</color>
+    <color name="light_grey_blue">#8199B3</color>
+    <color name="grey_blue">#34495E</color>
+    <color name="dark_grey_blue">#253442</color>
+    <color name="grey_blue_transparent">#6334495E</color>
+
+    <!-- others -->
+    <color name="dark_green">#1D4426</color>
+
+    <!-- generic -->
+    <color name="white">#FFFFFF</color>
+    <color name="light_grey">#C1C1C1</color>
+    <color name="med_grey">#727272</color>
+    <color name="dark_grey">#323232</color>
+    <color name="black">#64000000</color>
+</resources>

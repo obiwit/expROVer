@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/row_padding_vertical"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingTop="@dimen/row_padding_vertical">
+
+
+    <TextView
+        android:id="@+id/history_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/caviar_dreams"
+        android:text="Trip under cannal"
+        android:textColor="@color/dark_grey_blue" />
+    <!--android:textSize="@dimen/large_text_size"-->
+
+    <TextView
+        android:id="@+id/history_item_bookmarks"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/history_item_date"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/caviar_dreams"
+        android:text="100⭐"
+        android:textAlignment="textEnd"
+        android:textColor="@color/dark_grey_blue" />
+
+    <TextView
+        android:id="@+id/history_item_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@id/history_right_arrow"
+        android:layout_toEndOf="@+id/history_item_bookmarks"
+        android:fontFamily="@font/caviar_dreams"
+        android:gravity="start"
+        android:text="📌Geotag"
+        android:textAlignment="textEnd"
+        android:textColor="@color/dark_grey_blue" />
+
+
+    <TextView
+        android:id="@+id/history_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/history_item_name"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="19dp"
+        android:fontFamily="@font/caviar_dreams"
+        android:text="26 Mar 2019"
+        android:textColor="@color/dark_grey_blue" />
+
+    <TextView
+        android:id="@+id/history_item_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/history_item_name"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="19dp"
+        android:layout_toStartOf="@id/history_right_arrow"
+        android:layout_toEndOf="@+id/history_item_bookmarks"
+        android:fontFamily="@font/caviar_dreams"
+        android:text="2:10:53"
+        android:textAlignment="textEnd"
+        android:textColor="@color/dark_grey_blue" />
+
+    <View
+        android:id="@+id/history_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/history_item_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/dark_grey_blue"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/history_right_arrow"
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:layout_alignTop="@+id/history_item_name"
+        android:layout_alignBottom="@+id/history_item_date"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="3dp"
+        app:srcCompat="@drawable/icons8_right_arrow_dbg_50" />
+
+</RelativeLayout>
