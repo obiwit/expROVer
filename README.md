@@ -10,7 +10,7 @@ Every module of the project contains READMEs that better detail that module. Thi
 
 
 ### Installing
-To replicate the work on this repository, you need to follow the installation proccess.
+To replicate the work on this repository, you need to follow the installation proccess. (You can find a more thorough description on our [user manual page](http://obiwit.com/expROVer/usermanual).)
 
 
 1. Make sure you have ROS installed, if not, click the following link:
