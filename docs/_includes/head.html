@@ -14,34 +14,34 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{"/assets/vendor/bootstrap/css/bootstrap.min.css" | relative_url | prepend: site.url }}">
+  <link rel="stylesheet" href="{{"/assets/vendor/bootstrap/css/bootstrap.min.css" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}">
 
-  <link rel="stylesheet" href="{{"/assets/vendor/fontawesome-free/css/all.min.css" | relative_url | prepend: site.url }}">
+  <link rel="stylesheet" href="{{"/assets/vendor/fontawesome-free/css/all.min.css" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}">
 
-  <link rel="stylesheet" href="{{"/assets/main.css" | relative_url | prepend: site.url }}">
-  <link rel="stylesheet" href="{{"/assets/css/timeline.css" | relative_url | prepend: site.url }}">
-  <link rel="stylesheet" href="{{"/assets/css/main.css" | relative_url | prepend: site.url }}">
+  <link rel="stylesheet" href="{{"/assets/main.css" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{"/assets/css/timeline.css" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{"/assets/css/main.css" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}">
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}">
 
 <!-- favicon -->
-<link rel="apple-touch-icon" sizes="57x57" href={{"/assets/favicon/apple-icon-57x57.png" | prepend: site.url }}>
-<link rel="apple-touch-icon" sizes="60x60" href={{"/assets/favicon/apple-icon-60x60.png" | prepend: site.url }}>
-<link rel="apple-touch-icon" sizes="72x72" href={{"/assets/favicon/apple-icon-72x72.png" | prepend: site.url }}>
-<link rel="apple-touch-icon" sizes="76x76" href={{"/assets/favicon/apple-icon-76x76.png" | prepend: site.url }}>
-<link rel="apple-touch-icon" sizes="114x114" href={{"/assets/favicon/apple-icon-114x114.png" | prepend: site.url }}>
-<link rel="apple-touch-icon" sizes="120x120" href={{"/assets/favicon/apple-icon-120x120.png" | prepend: site.url }}>
-<link rel="apple-touch-icon" sizes="144x144" href={{"/assets/favicon/apple-icon-144x144.png" | prepend: site.url }}>
-<link rel="apple-touch-icon" sizes="152x152" href={{"/assets/favicon/apple-icon-152x152.png" | prepend: site.url }}>
-<link rel="apple-touch-icon" sizes="180x180" href={{"/assets/favicon/apple-icon-180x180.png" | prepend: site.url }}>
-<link rel="icon" type="image/png" sizes="192x192"  href={{"/assets/favicon/android-icon-192x192.png" | prepend: site.url }}>
-<link rel="icon" type="image/png" sizes="32x32" href={{"/assets/favicon/favicon-32x32.png" | prepend: site.url }}>
-<link rel="icon" type="image/png" sizes="96x96" href={{"/assets/favicon/favicon-96x96.png" | prepend: site.url }}>
-<link rel="icon" type="image/png" sizes="16x16" href={{"/assets/favicon/favicon-16x16.png" | prepend: site.url }}>
-<link rel="manifest" href={{"/assets/favicon/manifest.json" | prepend: site.url }}>
+<link rel="apple-touch-icon" sizes="57x57" href={{"/assets/favicon/apple-icon-57x57.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="apple-touch-icon" sizes="60x60" href={{"/assets/favicon/apple-icon-60x60.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="apple-touch-icon" sizes="72x72" href={{"/assets/favicon/apple-icon-72x72.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="apple-touch-icon" sizes="76x76" href={{"/assets/favicon/apple-icon-76x76.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="apple-touch-icon" sizes="114x114" href={{"/assets/favicon/apple-icon-114x114.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="apple-touch-icon" sizes="120x120" href={{"/assets/favicon/apple-icon-120x120.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="apple-touch-icon" sizes="144x144" href={{"/assets/favicon/apple-icon-144x144.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="apple-touch-icon" sizes="152x152" href={{"/assets/favicon/apple-icon-152x152.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="apple-touch-icon" sizes="180x180" href={{"/assets/favicon/apple-icon-180x180.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="icon" type="image/png" sizes="192x192"  href={{"/assets/favicon/android-icon-192x192.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="icon" type="image/png" sizes="32x32" href={{"/assets/favicon/favicon-32x32.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="icon" type="image/png" sizes="96x96" href={{"/assets/favicon/favicon-96x96.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="icon" type="image/png" sizes="16x16" href={{"/assets/favicon/favicon-16x16.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
+<link rel="manifest" href={{"/assets/favicon/manifest.json" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content={{"/assets/favicon/ms-icon-144x144.png" | prepend: site.url }}>
+<meta name="msapplication-TileImage" content={{"/assets/favicon/ms-icon-144x144.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}>
 <meta name="theme-color" content="#ffffff">
 
 </head>

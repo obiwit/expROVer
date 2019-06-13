@@ -10,7 +10,7 @@ video_background: '/assets/vid/underwater.mp4'
 Remotely Operated Vehicles (ROVs) are underwater vehicles used across several sea- and ocean-related industries, for fish management, research purposes, dangerous maintenance operations and several other tasks.
 
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/overview/rov.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="The VideoRay Pro 4">
+  <img src="{{"/assets/img/overview/rov.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="The VideoRay Pro 4">
   <figcaption class="figure-caption">The VideoRay Pro 4. <em>&copy; Katemcgarry via Wikimedia Commons</em></figcaption>
 </figure>
 
@@ -101,7 +101,7 @@ The ExpROVer is a software solution that will serve as a bridge between the user
 3. And the VideoRay Pro 4 ROV.
 
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/overview/architecture.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="Basic Architecture">
+  <img src="{{"/assets/img/overview/architecture.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="Basic Architecture">
   <figcaption class="figure-caption">The system's basic architecture.</figcaption>
 </figure>
 
@@ -145,7 +145,7 @@ Or you can also check a side by side comparison of the improvement (the video on
 The ExpROVer project’s roadmap is depicted in Figure 4:
 
 <figure style="max-width:100%; text-align: center; margin: 0 auto 1rem; padding-left: 30px;">
-  <img src="{{"/assets/img/overview/schedule.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="Project Schedule">
+  <img src="{{"/assets/img/overview/schedule.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="Project Schedule">
   <figcaption class="figure-caption">The ExpROVer project's roadmap.</figcaption>
 </figure>
 

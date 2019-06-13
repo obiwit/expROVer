@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="{{"/" | prepend: relative_url | prepend: site.url }}">{{ site.title | escape }}</a>
+    <a class="navbar-brand" href="{{"/" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}">{{ site.title | escape }}</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
@@ -9,16 +9,16 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{{"/" | prepend: relative_url | prepend: site.url }}">Home</a>
+          <a class="nav-link" href="{{"/" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Client Area
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="nav-link" href="{{"/overview" | prepend: relative_url | prepend: site.url}}">Overview</a>
+            <a class="nav-link" href="{{"/overview" | prepend: relative_url | prepend: site.baseurl | prepend: site.url}}">Overview</a>
             <div class="dropdown-divider"></div>
-            <a class="nav-link" href="{{"/usermanual" | prepend: relative_url | prepend: site.url}}">User-Manual</a>
+            <a class="nav-link" href="{{"/usermanual" | prepend: relative_url | prepend: site.baseurl | prepend: site.url}}">User-Manual</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -26,17 +26,17 @@
             Developer Area
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="nav-link" href="{{"/specifications" | prepend: relative_url | prepend: site.url}}">Specifications</a>
+            <a class="nav-link" href="{{"/specifications" | prepend: relative_url | prepend: site.baseurl | prepend: site.url}}">Specifications</a>
             <div class="dropdown-divider"></div>
-            <a class="nav-link" href="{{"/architecture" | prepend: relative_url | prepend: site.url}}">Architecture</a>
+            <a class="nav-link" href="{{"/architecture" | prepend: relative_url | prepend: site.baseurl | prepend: site.url}}">Architecture</a>
             <div class="dropdown-divider"></div>
-            <a class="nav-link" href="{{"/test" | prepend: relative_url | prepend: site.url}}">Test and Validation</a>
+            <a class="nav-link" href="{{"/test" | prepend: relative_url | prepend: site.baseurl | prepend: site.url}}">Test and Validation</a>
             <div class="dropdown-divider"></div>
-            <a class="nav-link" href="{{"/personas" | prepend: relative_url | prepend: site.url}}">Vision and Personas</a>
+            <a class="nav-link" href="{{"/personas" | prepend: relative_url | prepend: site.baseurl | prepend: site.url}}">Vision and Personas</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{"/team" | prepend: relative_url | prepend: site.url}}">Team</a>
+          <a class="nav-link" href="{{"/team" | prepend: relative_url | prepend: site.baseurl | prepend: site.url}}">Team</a>
         </li>
       </ul>
     </div>

@@ -21,7 +21,7 @@ video_background: '/assets/vid/underwater.mp4'
 ### Ralph Schmidt
 <div class="col-md-12">
   <p>
-  <img class="img-responsive" src="{{"/assets/img/personas/ralph.jpg" | prepend: relative_url | prepend: site.url }}" style="max-width: 25%; text-align: center; margin: 2px 10px; float:left;">
+  <img class="img-responsive" src="{{"/assets/img/personas/ralph.jpg" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" style="max-width: 25%; text-align: center; margin: 2px 10px; float:left;">
   Ralph is a college graduate with a degree in computer science working as professional programmer. Owning a VideoRay Pro 4, he also develops simple software for the VideoRay community as a hobby.  He wants to implement new pre-programmed actions in his ROV, but he is faced with the herculean task of modifying VideoRay’s proprietary Cockpit software. What he needs is an open source solution that provides him with both a control interface and the ability to add these new actions.</p>
 </div>
 <br>
@@ -29,7 +29,7 @@ video_background: '/assets/vid/underwater.mp4'
 ### Michelle Kahoru
 <div class="col-md-12">
   <p>
-  <img class="img-responsive pull-left" src="{{"/assets/img/personas/michelle.jpg" | prepend: relative_url | prepend: site.url }}" style="max-width: 25%; text-align: center; margin: 2px 10px; float:right;">
+  <img class="img-responsive pull-left" src="{{"/assets/img/personas/michelle.jpg" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" style="max-width: 25%; text-align: center; margin: 2px 10px; float:right;">
   Michelle is part of a specialized emergency response team and sometimes goes on emergency missions to find survivors trapped in shipwrecks. She recently started using a ROV as the main tool to find survivors and help them out as fast as possible. Every day, Michelle is more interested in ROVs and their potential for additional capabilities, enabled by the integration of new sensors and actuators. She aims to leverage ROVs to be more efficient in her job.As a result, she is looking for a solution that enables her to control the ROV in harsh conditions, at anytime, from anywhere. It comes as a useful bonus that this software also allows her to add support for new functionalities and peripherals in a relatively simple manner</p>
 </div>
 <br>
@@ -37,7 +37,7 @@ video_background: '/assets/vid/underwater.mp4'
 ### Peter Smith
 <div class="col-md-12">
   <p>
-  <img class="img-responsive pull-left" src="{{"/assets/img/personas/peter.jpg" | prepend: relative_url | prepend: site.url }}" style="max-width: 25%; text-align: center; margin: 2px 10px; float:left;">
+  <img class="img-responsive pull-left" src="{{"/assets/img/personas/peter.jpg" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" style="max-width: 25%; text-align: center; margin: 2px 10px; float:left;">
   Peter owns an aquaculture enterprise were he grows fish. He needs a way to control the health of his fish population, while also perform inspections on nets, pens, mooring points, and other elements of his farms. This type of jobs present risky work conditions for divers, so he is inclined towards using a remotely operated solution. It would allow him to monitor his fishes’ feeding habits and make periodical inspections. However, he is not very experienced neither with ROV handling nor ROV operations</p>
 </div>
 

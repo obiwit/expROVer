@@ -45,7 +45,7 @@ It is comprised of 3 main elements:
 3. And the VideoRay Pro 4 ROV.
 
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/usermanual/architecture.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="Basic Architecture">
+  <img src="{{"/assets/img/usermanual/architecture.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="Basic Architecture">
   <figcaption class="figure-caption">Figure 1 - The system's basic architecture.</figcaption>
 </figure>
 
@@ -139,27 +139,27 @@ To start the application simply type the IP address of the computer serving as s
 
 A page is displayed in order to proceed with registration (see Figure 2),
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/usermanual/web/signup.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="Sign up page">
+  <img src="{{"/assets/img/usermanual/web/signup.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="Sign up page">
   <figcaption class="figure-caption">Figure 2 - Sign up page.</figcaption>
 </figure>
 
 If you already have an account, you can instead log into the system (as depicted in Figure 3),
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/usermanual/web/login.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="Log in page">
+  <img src="{{"/assets/img/usermanual/web/login.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="Log in page">
   <figcaption class="figure-caption">Figure 3 - Log in page.</figcaption>
 </figure>
 
 ##### Main Screen
 After a successful authentication, the system is ready to operate the ROV. If you have no ROVs, you must first add your ROV. After that you can list all your ROVs (see Figure 4),
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/usermanual/web/main.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="Main screen, showing a list of the your ROVs">
+  <img src="{{"/assets/img/usermanual/web/main.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="Main screen, showing a list of the your ROVs">
   <figcaption class="figure-caption">Figure 4 - Main screen, showing a list of the your ROVs.</figcaption>
 </figure>
 
 ##### Operation
 Once you add the ROV you can now establish a connection to the VRP4. By using the keyboard you can now remotely control your ROV. 
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/usermanual/web/cockpit.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="Cockpit screen, showing the ROV's video camera feed">
+  <img src="{{"/assets/img/usermanual/web/cockpit.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="Cockpit screen, showing the ROV's video camera feed">
   <figcaption class="figure-caption">Figure 5 - Cockpit screen, showing the ROV's video camera feed.</figcaption>
 </figure>
 
@@ -171,7 +171,7 @@ To shutdown the system, you can simply close the browser window.
 ##### Start
 After the successful installation of the ExpROVer mobile App, double click on the ExpROVer icon. A sign-in screen will appear. Insert your credentials to access your ROV. In case you do not have yet an account, you should sign-up to obtain your credentials. (See Figure 6)
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/usermanual/android/sign.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="The sign up and sign in screens">
+  <img src="{{"/assets/img/usermanual/android/sign.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="The sign up and sign in screens">
   <figcaption class="figure-caption">Figure 6 - The sign up and sign in screens.</figcaption>
 </figure>
 Note that, like in the web platform, you can also use your google account to sign up and to log into the system.
@@ -179,7 +179,7 @@ Note that, like in the web platform, you can also use your google account to sig
 ##### Main Screen
 Once in the ExpROVer App the main screen to will appear as shown on the right in Figure 7. This screen presents all your ROVs, If you don’t have any ROV in the list you should click on the button “Add a new ROV”. By doing that a new screen will appear and you must insert the name and the respective IPv4 address of your ROV. You can also personalize it by uploading a photo of your ROV. After doing that and returning to main screen you should now be able to see your newly-added ROV in the list.
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/usermanual/android/rov_list.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="Add a new ROV and display the ROVs' list screens">
+  <img src="{{"/assets/img/usermanual/android/rov_list.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="Add a new ROV and display the ROVs' list screens">
   <figcaption class="figure-caption">Figure 7 - The main screen, listing your ROVs, as well as the screen for adding a new ROV.</figcaption>
 </figure>
 
@@ -191,14 +191,14 @@ By clicking in 2 a new screen will be displayed with the history associated to t
 
 The configure button (3), allows you to reconfigure your ROV, changing its name, the IP address as well as its associated the photo.
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/usermanual/android/rov_screen.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="Pro4 ROV's screen and history">
+  <img src="{{"/assets/img/usermanual/android/rov_screen.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="Pro4 ROV's screen and history">
   <figcaption class="figure-caption">Figure 8 - The Pro4 ROV's screen and history.</figcaption>
 </figure>
 
 ###### Expedition
 Once you start an expedition you will be able to see what the ROV “is seeing” (see Figure 9). In the top you should see the ROVs’ depth and the water temperature at ROVs’ depth. You can also see it's heading, if activated in the settings (5). 
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/usermanual/android/cockpit.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="The cockpit screen, allowing the operation of the ROV">
+  <img src="{{"/assets/img/usermanual/android/cockpit.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="The cockpit screen, allowing the operation of the ROV">
   <figcaption class="figure-caption">Figure 9 - The cockpit screen, which allows the remote control of the ROV.</figcaption>
 </figure>
 To maneuver the ROV you should use the joystick button (1) and to control your ROVs’ depth use the vertical joystick (2).

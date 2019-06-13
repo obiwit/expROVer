@@ -22,12 +22,12 @@ video_background: '/assets/vid/underwater.mp4'
       <tr>
         <th scope="row">Client's Perspective</th>
         <td>17 March 2019</td>
-        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - Client side.pdf" | prepend: relative_url | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
+        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - Client side.pdf" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
       </tr>    
       <tr>
         <th scope="row">User Manual Draft</th>
         <td>17 March 2019</td>
-        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - User Manual Draft.pdf" | prepend: relative_url | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
+        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - User Manual Draft.pdf" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
       </tr>   
     </tbody>
   </table>
@@ -47,24 +47,24 @@ video_background: '/assets/vid/underwater.mp4'
       <tr>
         <th scope="row">Architecture</th>
         <td>17 March 2019</td>
-        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - Architecture.pdf" | prepend: relative_url | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
+        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - Architecture.pdf" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
       </tr>   
       <tr>
         <th scope="row">Specifications</th>
         <td>17 March 2019</td>
-        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - Specifications.pdf" | prepend: relative_url | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
+        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - Specifications.pdf" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
       </tr>    
     </tbody>
     <tbody>
       <tr>
         <th scope="row">Vision and Scenarios | Personas and Motivations</th>
         <td>17 March 2019</td>
-        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - Vision and Scenarios - Personas and Motivations.pdf" | prepend: relative_url | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
+        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - Vision and Scenarios - Personas and Motivations.pdf" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
       </tr>    
       <tr>
         <th scope="row">Test and Validation</th>
         <td>17 March 2019</td>
-        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - Test and Validation.pdf" | prepend: relative_url | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
+        <td><a href="{{"/assets/pdf/m1/ExpROVer - M1 - Test and Validation.pdf" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" target="_blank">Open in a new tab</a></td>
       </tr>    
     </tbody>
   </table>

@@ -10,7 +10,7 @@ video_background: '/assets/vid/underwater.mp4'
 Remotely Operated Vehicles (ROVs) are underwater vehicles used across several sea- and ocean-related industries, for fish management, research purposes, dangerous maintenance operations and several other tasks.
 
 <figure style="max-width:80%; text-align: center; margin: 0 auto 1rem;">
-  <img src="{{"/assets/img/overview/rov.png" | prepend: relative_url | prepend: site.url }}" class="figure-img img-fluid" alt="The VideoRay Pro 4">
+  <img src="{{"/assets/img/overview/rov.png" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" class="figure-img img-fluid" alt="The VideoRay Pro 4">
   <figcaption class="figure-caption">The VideoRay Pro 4. <em>&copy; Katemcgarry via Wikimedia Commons</em></figcaption>
 </figure>
 

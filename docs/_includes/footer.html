@@ -48,7 +48,7 @@
           </li>
           {% endif %}
           <li class="list-inline-item">
-            <img src="{{"/assets/img/UAlogo.jpg" | prepend: relative_url | prepend: site.url }}" style="max-width:60%;">
+            <img src="{{"/assets/img/UAlogo.jpg" | prepend: relative_url | prepend: site.baseurl | prepend: site.url }}" style="max-width:60%;">
           </li>
         </ul>
         <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>

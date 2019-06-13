@@ -79,4 +79,4 @@ The ExpROVer software will allow people from a myriad of backgrounds to easily o
 
 ---
 
-Interested? Check out the full project description in our [client area]({{"/overview" | prepend: relative_url | prepend: site.url | append: ".html" }}).
+Interested? Check out the full project description in our [client area]({{"/overview" | prepend: relative_url | prepend: site.baseurl | prepend: site.url | append: ".html" }}).
