@@ -21,8 +21,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Underwater exploration, system’s management and maintenance, and research.
   <strong>At the tip of your fingertips.</strong>
 
-# baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://obiwit.github.io/expROVer" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/expROVer" # the subpath of your site, e.g. /blog
+url: "http://obiwit.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username:
 # github_username:
 
