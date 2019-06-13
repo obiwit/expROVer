@@ -1,6 +1,10 @@
 # expROVer
 The ExpROVer software intents to add value to the ROV market by enabling the use an open source solution enabling an easy and intuitive user interface, available anywhere and at anytime and ready to support extensions from the open source community.
 
+You can find more information in [our website](http://obiwit.github.io/expROVer/).
+Alternatively, you can check out [this prezi presentation](https://prezi.com/p/f4rznatru7lv/) to get an overview of the system.
+
+
 ## Getting Started
 Every module of the project contains READMEs that better detail that module. This page is intended as a general overview of the system.
 
@@ -87,11 +91,11 @@ The rotation is made only by the vertical axis, and is given by degrees
 
 ```
 
+## More Information
+You can find more information in [our website](http://obiwit.github.io/expROVer/).
+
 ## License
 This project is under the license of **GPL-3.0** you can see more information in [LICENSE](LICENSE)
-
-## More Information
-You can find more information in [our website](http://xcoa.av.it.pt/~pei2018-2019_g010/).
 
 ## Acknowledgments
 We would like to particularly thank our mentors, professors Nuno Lau, Francisco Curado and Paulo Lopes, whose guidance and expertise made it possible for us to achieve such a functional, fine-tuned and robust final project.
