@@ -22,7 +22,7 @@ description: > # this means to ignore newlines until "baseurl:"
   <strong>At the tip of your fingertips.</strong>
 
 # baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://obiwit.github.io/exprover" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://obiwit.github.io/expROVer" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username:
 # github_username:
 
