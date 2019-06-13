@@ -30,7 +30,7 @@ video_background: '/assets/vid/underwater.mp4'
       - [Operation](#operation-1)
         - [Configuration](#configuration)
         - [Expedition](#expedition)
-        - [Shutdown](#shutdown-2)
+      - [Shutdown](#shutdown-2)
 - [Intelligent functionalities](#intelligent-functionalities)
   - [Computer Vision](#computer-vision)
   - [Semi-autonomous maneuvers](#semi-autonomous-maneuvers)
@@ -209,7 +209,7 @@ When you detect something that you consider important you can bookmark it, The s
 
 In (5) you can enable the heading sensor visualization, and activate or deactivate the presence of a reference picture.
 
-###### Shutdown
+##### Shutdown
 Simply close the application.
 
 ---
