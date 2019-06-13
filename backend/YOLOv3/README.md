@@ -8,9 +8,7 @@ Adapted and developed from the original [qqwweee's Keras implementation of YOLOv
 
 ## Quick Start
 
-You will first need to unzip the file `model_data/model_weights`, to generate the neural network's weights.
-
-Afterwards, to execute fish detection in a video, run the following command:
+To execute fish detection in a video, run the following command:
 ```bash
 python yolo_video.py --input <input_video_path> --output <output_path>
 # OR
