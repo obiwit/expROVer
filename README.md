@@ -94,7 +94,4 @@ This project is under the license of **GPL-3.0** you can see more information in
 You can find more information in [our website](http://xcoa.av.it.pt/~pei2018-2019_g010/).
 
 ## Acknowledgments
-* Mentors
-* Hard work
-* ...
-
+We would like to particularly thank our mentors, professors Nuno Lau, Francisco Curado and Paulo Lopes, whose guidance and expertise made it possible for us to achieve such a functional, fine-tuned and robust final project.
