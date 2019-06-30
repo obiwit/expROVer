@@ -95,7 +95,7 @@ The rotation is made only by the vertical axis, and is given by degrees
 You can find more information in [our website](http://obiwit.github.io/expROVer/).
 
 ## License
-This project is under the license of **GPL-3.0** you can see more information in [LICENSE](LICENSE)
+This project is under the license of **GPL-3.0**. You can find more information in [LICENSE](LICENSE).
 
 ## Acknowledgments
 We would like to particularly thank our mentors, professors Nuno Lau, Francisco Curado and Paulo Lopes, whose guidance and expertise made it possible for us to achieve such a functional, fine-tuned and robust final project.
